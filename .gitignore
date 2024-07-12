@@ -1,3 +1,6 @@
-tmp
-uploads
-geofiles
+.venv
+.idea
+venv
+__pycache__
+media
+.env
