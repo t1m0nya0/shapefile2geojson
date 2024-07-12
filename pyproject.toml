@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "shpfile2geojson"
+version = "0.1.0"
+description = ""
+authors = ["Tamir <t.nurbulatuly@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+flask = "^3.0.3"
+werkzeug = "^3.0.3"
+geopandas = "^1.0.1"
+shapely = "^2.0.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
