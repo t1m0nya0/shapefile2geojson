@@ -84,6 +84,11 @@ def upload_file():
 
         # Read the shapefile and convert to GeoJSON
         gdf = gpd.read_file(shp_file)
+        shp_filename = os.path.basename(shp_file).lower().rsplit('.', 1)[0]
+        gdf['hazard'] = shp_filename
+        
+        gdf = gdf.rename(columns=lambda x: x.replace(' ', '_'))
+
         geojson_file = os.path.join('geofiles', f'{unique_id}.json')
         gdf.to_file(geojson_file, driver='GeoJSON')
 
